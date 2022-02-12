@@ -19,8 +19,13 @@ while True:
         print(f"Selected: {selected_item}")
         ingredients = recipes[selected_item]
         print(ingredients)
-        for i in ingredients:
-            if i in pantry:
-                print(f"Pantry has {i}")
+        for ingredient in ingredients:
+            if ingredient not in pantry:
+                print(f"missing: {ingredient}")
             else:
-                print(f"sorry we do not have required ingredients, missing: {i}")
+                print(f"{ingredient} available: {pantry[ingredient]}")
+
+            # if ingredient in pantry:
+            #     print(f"Pantry has {ingredient}")
+            # else:
+            #     print(f"Missing: {ingredient}")
