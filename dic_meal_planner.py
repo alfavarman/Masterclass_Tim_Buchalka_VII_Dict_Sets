@@ -15,6 +15,12 @@ while True:
     if choice == "0":
         break
     elif choice in display_dict:
-        print(f"Selected: {display_dict[choice]}")
-        ingredients = recipes[display_dict[choice]]
+        selected_item = display_dict[choice]
+        print(f"Selected: {selected_item}")
+        ingredients = recipes[selected_item]
         print(ingredients)
+        for i in ingredients:
+            if i in pantry:
+                print(f"Pantry has {i}")
+            else:
+                print(f"sorry we do not have required ingredients, missing: {i}")
