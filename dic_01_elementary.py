@@ -20,6 +20,7 @@ employment = {
 # 1. Pull value
 #   indexing with key
 #   wrong key -> error but faster
+# print("\n 1. Pull Value")
 #my_income = employment['employer_1']
 #print(my_income)
 #
@@ -32,6 +33,7 @@ employment = {
 
 # 2. Iterating
 # # a. less efficient
+# print("\n 2. Iterating")
 # for key in employment:
 #     print(key, employment[key], sep=": ")
 # # b. dictionary `enumerate` PRO!
@@ -40,14 +42,29 @@ employment = {
 
 # 3. Adding elements: dictionaries doesnt have .append method
 # dict preserve insertion order since p 3.6
+print("\n 3. Adding elements")
 employment["previous_employer"] = "variable income"
+employment["dream employer"] = "dream income 40 000 USD"
 for key in employment:
     print(key, employment[key], sep=":: ")
 
+
 # 4. Updating value same as adding but use same key:
+print("\n 4. Update elements")
 employment["previous_employer"] = "Rainbow"
 for key in employment:
     print(key, employment[key], sep=":: ")
 
 # 5. deleting item
+# del - just remove value, return error if wrong key
+print("\n 5. remove elements")
 del employment["previous_employer"]
+# remove value dict/list and return value
+employment.pop("dream employer")
+for key in employment:
+    print(key, employment[key], sep="==> ")
+# wrong key handle with no error:
+i = employment.pop("non_exist_employer", None)
+ii = employment.pop("non_exist_employer2", "no value exist with such a key")
+print(f"\n i = employment.pop(\"non_exist_employer\", None) Returns: \n {i}\n "
+      f"\n ii = employment.pop(\"non_exist_employer2\", \"no value exist with such a key\") \n {ii} ")
