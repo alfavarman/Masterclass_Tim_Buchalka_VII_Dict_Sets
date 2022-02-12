@@ -16,3 +16,5 @@ while True:
         break
     elif choice in display_dict:
         print(f"Selected: {display_dict[choice]}")
+        ingredients = recipes[display_dict[choice]]
+        print(ingredients)
