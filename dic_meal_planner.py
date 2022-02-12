@@ -19,11 +19,21 @@ while True:
         print(f"Selected: {selected_item}")
         ingredients = recipes[selected_item]
         print(ingredients)
-        for ingredient in ingredients:
-            if ingredient not in pantry:
-                print(f"missing: {ingredient}")
+        for ingredient, required_quantity in ingredients.items():
+            quantity_in_pantry = pantry.get(ingredient, 0)
+            if required_quantity <= quantity_in_pantry:
+                pass
+                # print(f"{ingredient} in stock")
             else:
-                print(f"{ingredient} available: {pantry[ingredient]}")
+                quantity_to_order = required_quantity
+                print(f"{ingredient} is not enough, please buy at last: {quantity_to_order}")
+
+
+        # for ingredient in ingredients:
+        #     if ingredient not in pantry:
+        #         print(f"missing: {ingredient}")
+        #     else:x
+        #         print(f"{ingredient} available: {pantry[ingredient]}")
 
             # if ingredient in pantry:
             #     print(f"Pantry has {ingredient}")
