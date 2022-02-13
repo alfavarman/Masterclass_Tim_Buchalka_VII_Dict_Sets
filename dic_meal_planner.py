@@ -10,7 +10,10 @@ def add_missing_ingredient(data: dict, product: str, amount: int) -> None:
     :param amount: (value) int number of product
     :return:
     """
-    data[product] = amount
+    if product in data:
+        data[product] += amount
+    else:
+        data[product] = amount
 
 
 # menu_dict = {str(index + 1): meal for index, meal in enumerate(recipes)}
