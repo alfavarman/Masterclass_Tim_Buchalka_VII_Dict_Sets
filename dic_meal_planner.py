@@ -22,13 +22,17 @@ for index, key in enumerate(recipes):
     menu_dict[str(index + 1)] = key
 ingredients_to_buy = {}                         # dict to collect missing ingredients
 while True:
-    print("Please Choose From The Menu:\n"
+    print("\nPlease Choose From The Menu:\n"
           "----------------------------")
     for key, value in menu_dict.items():        # function to print menu_dict as menu
         print(f"{key}: {value}")
     choice = input(": ")                        # user select choice from menu
     if choice == "0":                           # 0 to EXIT program
         break
+    elif choice == "9":
+        print("List to buy:")
+        for key, value in ingredients_to_buy.items():
+            print(f"-{key}: {value}")
     elif choice in menu_dict:
         selected_item = menu_dict[choice]       # value of selected key stored in variable
         ingredients = recipes[selected_item]    # use value of key from menu_dict as the dict'
