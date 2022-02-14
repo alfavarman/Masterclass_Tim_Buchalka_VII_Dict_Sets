@@ -80,3 +80,13 @@ i = employment.pop("non_exist_employer", None)
 ii = employment.pop("non_exist_employer2", "no value exist with such a key")
 print(f"\n i = employment.pop(\"non_exist_employer\", None) Returns: \n {i}\n "
       f"\n ii = employment.pop(\"non_exist_employer2\", \"no value exist with such a key\") \n {ii} ")
+
+# Operations dict supports:
+print("\n 6. Operations Dict support:")
+# list(d) - list all keys
+print("A:: list(employment) list all keys from dictionary:")
+print(list(employment))
+
+# len(d) - return number of items in dict
+print("B:: len(employment) - return number of items in dict:")
+print(len(employment))
