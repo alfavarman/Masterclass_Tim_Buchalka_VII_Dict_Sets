@@ -33,11 +33,11 @@ recipes_copy['Butter chicken']['ginger'] = 300
 print(recipes["Butter chicken"]["ginger"])
 print(recipes_copy["Butter chicken"]["ginger"])
 
-print()
-pantry_copy = deepcopy_1lvl(pantry)
-print(type(pantry))
-print(id(pantry), pantry)
-print(id(pantry_copy), pantry_copy)
+# print()
+# pantry_copy = deepcopy_1lvl(pantry)
+# print(type(pantry))
+# print(id(pantry), pantry)
+# print(id(pantry_copy), pantry_copy)
 # pantry_copy["Butter chicken"]["ginger"] = 300
 # print(pantry["Butter chicken"]["ginger"])
 # print(pantry_copy["Butter chicken"]["ginger"])
