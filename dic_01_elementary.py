@@ -1,12 +1,24 @@
-#  Unstructured collection of values stored via unique keys
-#  Iterable, Mutable/Variable,
+# [dict] Unstructured collection of values stored via unique keys
+# Iterable, Mutable/Variable,
 # Can't : use indexes, can use keys
+# KEY - must be hashable - must be immutable - constant or tuple
+# But tuple CAN'T contain list!
+# Value - any object
+#
 # dictionary = {
 #               'employer_1' : 'min income 1500 USD',
 #               'employer_2' : 'min income 3000 USD',
 #               'employer_3' : 'min income 7000 USD',
 #               }
 # 'key' : 'value',
+# different ways to create dict
+a = dict(one=1, two=2, three=3)
+b = {'one': 1, 'two': 2, 'three': 3}
+c = dict(zip(['one', 'two', 'three'], [1, 2, 3]))
+d = dict([('two', 2), ('three', 3), ('one', 1)])
+e = dict({'three': 3, 'one': 1, 'two': 2})
+f = dict({'three': 3, 'one': 1}, two=2)
+print(a == b == c == d == e == f) # True :)
 
 
 employment = {
