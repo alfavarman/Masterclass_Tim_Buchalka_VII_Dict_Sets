@@ -48,7 +48,7 @@ while mode not in travel_mode:
 
 if mode == "2":
     # travelling by plane, remove restricted items
-    pass
+    items = items - restricted_items # returns set without shared items of restricted_items set
 
 # print the packing list
 print("You need to pack:")
